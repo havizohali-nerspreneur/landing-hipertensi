@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taklukkan Hipertensi — Panduan Lengkap untuk Keluarga Indonesia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-deep:#123F38;
+    --teal-mid:#1F7A6C;
+    --teal-pale:#DCEDE7;
+    --cream:#F5EAD2;
+    --paper:#FFFDF7;
+    --orange:#EF7A2E;
+    --orange-d:#B3540F;
+    --orange-pale:#FBDCB8;
+    --sage:#7FBA88;
+    --sage-deep:#3E7A49;
+    --ink:#17231E;
+    --ink-soft:#46584F;
+    --line:#D8C89C;
+    --shadow: 0 20px 50px -20px rgba(18,63,56,0.35);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Plus Jakarta Sans', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{ font-family:'Fraunces', serif; font-weight:700; letter-spacing:-0.01em; }
+  .container{ max-width:1080px; margin:0 auto; padding:0 24px; }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--orange);
+  }
+  .eyebrow::before{ content:''; width:18px; height:2px; background:var(--orange); display:inline-block; }
+
+  /* ---------------- Buttons ---------------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:17px;
+    padding:17px 34px; border-radius:100px; text-decoration:none;
+    cursor:pointer; border:none; transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{
+    background:linear-gradient(135deg, #F0812F, #C85A16); color:#fff;
+    box-shadow:0 14px 28px -10px rgba(184,84,15,0.55);
+    text-shadow:0 1px 1px rgba(0,0,0,0.12);
+  }
+  .btn-primary:hover{ box-shadow:0 18px 34px -10px rgba(184,84,15,0.65); }
+  .btn-ghost{
+    background:transparent; color:var(--paper); border:1.5px solid rgba(255,255,255,0.4);
+  }
+  .btn-block{ width:100%; }
+  .btn small{ display:block; font-weight:500; font-size:12.5px; opacity:0.85; margin-top:2px; }
+
+  /* ---------------- Hero ---------------- */
+  .hero{
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(239,122,46,0.18), transparent 60%),
+      linear-gradient(180deg, var(--teal-deep) 0%, #0E332D 100%);
+    color:var(--paper);
+    padding:56px 0 120px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:'';
+    position:absolute; left:-120px; bottom:-160px; width:420px; height:420px;
+    border-radius:50%; background:radial-gradient(circle, rgba(127,186,136,0.18), transparent 70%);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-bottom:48px; position:relative; z-index:2;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; font-weight:700; font-size:15px; letter-spacing:0.02em; }
+  .brand-mark{
+    width:32px; height:32px; border-radius:9px; background:var(--orange);
+    display:flex; align-items:center; justify-content:center; color:#fff; font-family:'Fraunces',serif; font-weight:700;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
+    position:relative; z-index:2;
+  }
+  .hero h1{
+    font-size:clamp(34px, 4.4vw, 54px); line-height:1.08; color:var(--paper); margin:18px 0 22px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--orange); font-weight:600; }
+  .hero p.lede{
+    font-size:19px; color:#D9E7E1; max-width:480px; margin-bottom:32px;
+  }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-bottom:34px; }
+  .trust-row{
+    display:flex; flex-wrap:wrap; gap:22px; padding-top:26px; border-top:1px solid rgba(255,255,255,0.15);
+  }
+  .trust-item{ display:flex; align-items:center; gap:10px; font-size:14px; color:#CFE1DA; }
+  .trust-item b{ color:#fff; font-size:20px; font-family:'Fraunces',serif; }
+
+  /* ---------------- Book mockup ---------------- */
+  .mock-wrap{ position:relative; display:flex; justify-content:center; align-items:center; min-height:460px; }
+  .mock-card{
+    width:270px; aspect-ratio:210/297; border-radius:16px;
+    position:absolute; box-shadow:var(--shadow);
+  }
+  .mock-back2{
+    background:var(--teal-mid); transform:rotate(11deg) translate(18px,10px); opacity:0.55;
+  }
+  .mock-back1{
+    background:var(--sage); transform:rotate(-7deg) translate(-14px,6px); opacity:0.7;
+  }
+  .mock-front{
+    background:linear-gradient(160deg, #DCEEEF 0%, var(--cream) 55%, var(--orange-pale) 100%);
+    transform:rotate(3deg);
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    padding:26px 20px; color:var(--teal-deep);
+  }
+  .mock-eyebrow{ font-size:8.5px; letter-spacing:0.15em; font-weight:700; color:var(--teal-mid); margin-top:4px; }
+  .mock-heart{
+    width:64px; height:64px; border-radius:50%; background:#D9EEF0;
+    border:1.5px dashed var(--orange); display:flex; align-items:center; justify-content:center;
+    margin:16px 0 14px;
+  }
+  .mock-title{ font-family:'Fraunces',serif; font-weight:700; font-size:26px; color:var(--teal-deep); }
+  .mock-sub{ font-family:'Fraunces',serif; font-style:italic; font-size:11px; color:var(--orange-d); margin-top:4px; }
+  .mock-lines{ margin-top:14px; width:80%; }
+  .mock-lines span{ display:block; height:4px; border-radius:2px; background:rgba(18,63,56,0.18); margin-bottom:5px; }
+  .mock-lines span:nth-child(2){ width:70%; margin-left:auto; margin-right:auto; }
+  .mock-foot{ margin-top:auto; font-size:8px; color:var(--teal-mid); font-weight:700; letter-spacing:0.06em; }
+
+  .badge-chip{
+    position:absolute; background:#fff; color:var(--teal-deep);
+    padding:10px 16px; border-radius:100px; font-size:13px; font-weight:700;
+    box-shadow:0 12px 24px -8px rgba(0,0,0,0.25); display:flex; align-items:center; gap:7px;
+  }
+  .badge-chip .dot{ width:8px; height:8px; border-radius:50%; background:var(--orange); }
+  .badge-1{ top:8%; left:-4%; }
+  .badge-2{ bottom:14%; right:-6%; }
+  .badge-3{ top:46%; right:-10%; background:var(--orange); color:#fff; }
+  .badge-3 .dot{ background:#fff; }
+
+  /* ---------------- Section shell ---------------- */
+  section{ padding:88px 0; }
+  .section-head{ max-width:640px; margin:0 auto 52px; text-align:center; }
+  .section-head h2{ font-size:clamp(28px,3.4vw,40px); margin-top:14px; color:var(--teal-deep); line-height:1.15; }
+  .section-head p{ font-size:17px; color:var(--ink-soft); margin-top:14px; }
+  .center{ text-align:center; }
+
+  /* ---------------- Problem / stats ---------------- */
+  .stat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
+  .stat-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:20px;
+    padding:34px 26px; text-align:center;
+  }
+  .stat-num{ font-family:'Fraunces',serif; font-weight:700; font-size:44px; color:var(--teal-deep); }
+  .stat-label{ font-size:14.5px; color:var(--ink-soft); margin-top:8px; }
+  .callout-band{
+    margin-top:44px; background:var(--teal-deep); color:var(--paper);
+    border-radius:20px; padding:30px 36px; display:flex; gap:20px; align-items:center;
+  }
+  .callout-band .icon{
+    width:46px; height:46px; border-radius:12px; background:var(--orange); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-size:22px;
+  }
+  .callout-band p{ font-size:16.5px; color:#E4EFE9; }
+  .callout-band b{ color:#fff; }
+
+  /* ---------------- What's inside ---------------- */
+  .inside{ background:var(--teal-deep); color:var(--paper); }
+  .inside .section-head p{ color:#CFE1DA; }
+  .inside .eyebrow{ color:var(--orange); }
+  .chapter-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:8px; }
+  .chapter-card{
+    background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14);
+    border-radius:18px; padding:26px 26px 24px;
+  }
+  .chapter-card .num{
+    font-family:'Fraunces',serif; font-size:13px; font-weight:700; color:var(--orange);
+    letter-spacing:0.1em;
+  }
+  .chapter-card h3{ font-size:19px; color:#fff; margin:10px 0 12px; }
+  .chapter-card ul{ list-style:none; }
+  .chapter-card li{
+    font-size:14.5px; color:#D6E5DF; padding-left:20px; position:relative; margin-bottom:8px;
+  }
+  .chapter-card li::before{
+    content:'✓'; position:absolute; left:0; top:0; color:var(--sage); font-weight:700; font-size:13px;
+  }
+  .kitchen-highlight{
+    margin-top:24px; background:linear-gradient(120deg, rgba(239,122,46,0.16), rgba(239,122,46,0.04));
+    border:1px solid rgba(239,122,46,0.4); border-radius:18px; padding:22px 26px;
+    display:flex; align-items:center; gap:18px;
+  }
+  .kitchen-highlight .icon{ font-size:30px; }
+  .kitchen-highlight strong{ color:#fff; }
+  .kitchen-highlight span{ color:#D6E5DF; font-size:14.5px; }
+
+  /* ---------------- Author ---------------- */
+  .author-wrap{ display:grid; grid-template-columns:220px 1fr; gap:40px; align-items:center; }
+  .author-photo{
+    width:220px; height:220px; border-radius:50%; background:linear-gradient(160deg,var(--teal-pale),var(--orange-pale));
+    display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif;
+    font-size:64px; color:var(--teal-deep); font-weight:700; border:6px solid var(--paper); box-shadow:var(--shadow);
+  }
+  .author-wrap h3{ font-size:26px; color:var(--teal-deep); }
+  .author-wrap .role{ color:var(--orange-d); font-weight:700; font-size:14px; margin-top:4px; }
+  .author-wrap p.bio{ margin-top:14px; color:var(--ink-soft); font-size:16px; max-width:520px; }
+
+  /* ---------------- Pricing ---------------- */
+  .pricing{ background:linear-gradient(180deg, var(--cream), #EFE1BC); }
+  .price-card{
+    max-width:520px; margin:0 auto; background:var(--paper); border-radius:28px;
+    border:1.5px solid var(--line); box-shadow:var(--shadow); overflow:hidden;
+  }
+  .price-top{ background:var(--teal-deep); color:#fff; padding:28px 36px; text-align:center; }
+  .price-top .eyebrow{ color:var(--orange); }
+  .price-body{ padding:34px 36px 38px; }
+  .value-list{ list-style:none; margin-bottom:26px; }
+  .value-list li{
+    display:flex; gap:12px; align-items:flex-start; font-size:15.5px; color:var(--ink);
+    padding:9px 0; border-bottom:1px dashed var(--line);
+  }
+  .value-list li:last-child{ border-bottom:none; }
+  .value-list .check{
+    width:20px; height:20px; border-radius:50%; background:var(--sage); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; color:#fff; font-size:11px; font-weight:700; margin-top:1px;
+  }
+  .price-row{ text-align:center; margin:26px 0 8px; }
+  .price-old{ font-size:17px; color:var(--ink-soft); text-decoration:line-through; opacity:0.7; }
+  .price-new{ font-family:'Fraunces',serif; font-weight:800; font-size:48px; color:var(--orange-d); }
+  .price-note{ font-size:13.5px; color:var(--ink-soft); }
+  .compare{
+    margin-top:18px; background:var(--teal-pale); border-radius:14px; padding:14px 18px;
+    font-size:14px; color:var(--teal-deep); text-align:center;
+  }
+  .guarantee{
+    display:flex; gap:10px; align-items:center; justify-content:center;
+    margin-top:20px; font-size:13.5px; color:var(--ink-soft);
+  }
+
+  /* ---------------- FAQ ---------------- */
+  .faq-list{ max-width:720px; margin:0 auto; }
+  details{
+    background:var(--paper); border:1px solid var(--line); border-radius:14px;
+    padding:20px 24px; margin-bottom:14px;
+  }
+  summary{
+    cursor:pointer; font-weight:700; font-size:16.5px; color:var(--teal-deep);
+    list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{ content:'+'; font-size:22px; color:var(--orange); flex-shrink:0; transition:transform .2s ease; }
+  details[open] summary::after{ transform:rotate(45deg); }
+  details p{ margin-top:14px; color:var(--ink-soft); font-size:15px; }
+
+  /* ---------------- Final CTA ---------------- */
+  .final-cta{
+    background:linear-gradient(160deg, var(--teal-deep), #0B2B26);
+    color:#fff; text-align:center; border-radius:32px; margin:0 24px; padding:64px 32px;
+    position:relative; overflow:hidden;
+  }
+  .final-cta::before{
+    content:''; position:absolute; top:-100px; right:-100px; width:300px; height:300px;
+    border-radius:50%; background:radial-gradient(circle, rgba(239,122,46,0.25), transparent 70%);
+  }
+  .final-cta h2{ color:#fff; font-size:clamp(26px,3.4vw,38px); position:relative; z-index:1; }
+  .final-cta p{ color:#CFE1DA; margin:14px 0 30px; font-size:17px; position:relative; z-index:1; }
+
+  footer{ padding:48px 24px 32px; text-align:center; color:var(--ink-soft); font-size:13px; }
+  footer .fine{ margin-top:10px; max-width:560px; margin-left:auto; margin-right:auto; opacity:0.75; line-height:1.6; }
+
+  /* ---------------- Reveal on scroll ---------------- */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  @media (max-width:860px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .mock-wrap{ order:-1; min-height:340px; margin-bottom:8px; }
+    .mock-card{ width:210px; }
+    .stat-grid{ grid-template-columns:1fr; }
+    .chapter-grid{ grid-template-columns:1fr; }
+    .author-wrap{ grid-template-columns:1fr; text-align:center; }
+    .author-wrap p.bio{ margin-left:auto; margin-right:auto; }
+    .author-photo{ margin:0 auto; }
+    .badge-1, .badge-2, .badge-3{ display:none; }
+    .callout-band{ flex-direction:column; text-align:center; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <div class="nav">
+      <div class="brand"><span class="brand-mark">H</span> Edukasi Sehat &middot; Ns. Havizoh</div>
+      <a href="#harga" class="btn btn-ghost" style="padding:12px 24px; font-size:14px;">Lihat Harga</a>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Ebook Edukasi Kesehatan</span>
+        <h1>Hipertensi Diam-Diam Menyerang <em>1 dari 3</em> Orang Dewasa Indonesia.</h1>
+        <p class="lede">Jangan tunggu sampai jadi bagian yang terlambat sadar. Panduan lengkap 17 halaman ini membantu Anda dan keluarga mengenali, mencegah, dan mengendalikan tekanan darah tinggi — dengan bahasa sederhana yang langsung bisa dipraktikkan hari ini.</p>
+        <div class="hero-ctas">
+          <a href="#harga" class="btn btn-primary">
+            Dapatkan Ebooknya Sekarang
+          </a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item"><b>17</b> Halaman panduan lengkap</div>
+          <div class="trust-item"><b>Ns.</b> Ditulis perawat komunitas</div>
+          <div class="trust-item"><b>1x</b> Bayar, akses selamanya</div>
+        </div>
+      </div>
+
+      <div class="mock-wrap">
+        <div class="mock-card mock-back2"></div>
+        <div class="mock-card mock-back1"></div>
+        <div class="mock-card mock-front">
+          <div class="mock-eyebrow">EDUKASI KESEHATAN KELUARGA</div>
+          <div class="mock-heart">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.6-9.7-9.1C.6 8.7 2 5 5.4 5c2 0 3.4 1.2 4.1 2.3.3.5 .7 .5 1 0C11.2 6.2 12.6 5 14.6 5 18 5 19.4 8.7 21.7 11.9 19 16.4 12 21 12 21z" fill="#123F38"/></svg>
+          </div>
+          <div class="mock-title">Hipertensi</div>
+          <div class="mock-sub">Kenali &middot; Cegah &middot; Kendalikan</div>
+          <div class="mock-lines"><span></span><span></span></div>
+          <div class="mock-foot">17 HALAMAN &middot; EDISI 2026</div>
+        </div>
+
+        <div class="badge-chip badge-1"><span class="dot"></span>Bahasa Mudah</div>
+        <div class="badge-chip badge-2"><span class="dot"></span>Bonus: Bab Bahan Dapur</div>
+        <div class="badge-chip badge-3"><span class="dot"></span>PDF Instan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="justify-content:center;">Fakta yang Perlu Anda Tahu</span>
+      <h2>Hipertensi Sering Tidak Terasa — Sampai Terlambat.</h2>
+      <p>Karena itulah, banyak orang baru sadar setelah komplikasi seperti stroke atau serangan jantung terjadi. Semakin cepat Anda paham, semakin besar peluang untuk mencegahnya.</p>
+    </div>
+
+    <div class="stat-grid reveal">
+      <div class="stat-card">
+        <div class="stat-num">30,8%</div>
+        <div class="stat-label">orang dewasa Indonesia mengidap hipertensi (Survei Kesehatan Indonesia 2023)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1 dari 3</div>
+        <div class="stat-label">orang di sekitar kita hidup dengan tekanan darah tinggi, sering tanpa disadari</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">~8%</div>
+        <div class="stat-label">saja yang sudah terdiagnosis dokter — sisanya belum terdeteksi sama sekali</div>
+      </div>
+    </div>
+
+    <div class="callout-band reveal">
+      <div class="icon">i</div>
+      <p><b>Kabar baiknya:</b> hipertensi sangat mungkin dicegah dan dikendalikan dengan pemahaman yang tepat dan kebiasaan sehari-hari yang sederhana — itulah yang akan Anda pelajari di ebook ini.</p>
+    </div>
+  </div>
+</section>
+
+<section class="inside">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="justify-content:center;">Isi Ebook</span>
+      <h2>Semua yang Anda Butuhkan, dalam Satu Panduan</h2>
+      <p>Disusun berurutan agar mudah diikuti — dari memahami kondisi, mendeteksi sejak dini, hingga langkah pencegahan harian.</p>
+    </div>
+
+    <div class="chapter-grid reveal">
+      <div class="chapter-card">
+        <div class="num">BAGIAN 01</div>
+        <h3>Kenali Hipertensi</h3>
+        <ul>
+          <li>Apa itu hipertensi & mengapa disebut "silent killer"</li>
+          <li>Fakta & data terkini di Indonesia</li>
+          <li>7 mitos vs fakta yang sering keliru</li>
+          <li>Faktor risiko & gejala yang perlu diwaspadai</li>
+        </ul>
+      </div>
+      <div class="chapter-card">
+        <div class="num">BAGIAN 02</div>
+        <h3>Deteksi Sejak Dini</h3>
+        <ul>
+          <li>Cara mengukur tekanan darah yang benar</li>
+          <li>Tabel klasifikasi tekanan darah lengkap</li>
+          <li>Kapan kondisi disebut darurat</li>
+        </ul>
+      </div>
+      <div class="chapter-card">
+        <div class="num">BAGIAN 03</div>
+        <h3>Cegah & Kendalikan</h3>
+        <ul>
+          <li>Pola makan sehat untuk jantung</li>
+          <li>Panduan aktivitas fisik harian</li>
+          <li>Kelola stres & tidur berkualitas</li>
+          <li>Batasi garam, rokok & alkohol</li>
+        </ul>
+      </div>
+      <div class="chapter-card">
+        <div class="num">BAGIAN 04</div>
+        <h3>Bertindak Hari Ini</h3>
+        <ul>
+          <li>Panduan kapan harus ke dokter</li>
+          <li>Teknik 5 menit meredakan tekanan darah</li>
+          <li>Checklist gaya hidup sehat harian</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kitchen-highlight reveal">
+      <div class="icon">🌿</div>
+      <div><strong>Bonus:</strong> <span>Semua ditulis dengan bahasa sehari-hari, dilengkapi ilustrasi di setiap halaman — bukan jurnal medis yang bikin pusing.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="justify-content:center;">Siapa yang Menulis Ini</span>
+      <h2>Bukan dari Tim Marketing — Langsung dari Tenaga Kesehatan</h2>
+    </div>
+    <div class="author-wrap reveal">
+      <div class="author-photo">NH</div>
+      <div>
+        <h3>Ns. Havizoh</h3>
+        <div class="role">Ners Keperawatan Komunitas</div>
+        <p class="bio">Sehari-hari bekerja langsung bersama masyarakat mengedukasi hidup sehat dan pencegahan penyakit. Ebook ini disusun dari pengalaman lapangan — memahami bahasa dan pertanyaan yang benar-benar dihadapi keluarga Indonesia soal hipertensi, lalu merangkumnya menjadi panduan yang mudah diikuti siapa saja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="harga">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="justify-content:center;">Investasi Kesehatan Keluarga</span>
+      <h2>Lebih Murah dari Secangkir Kopi, Manfaatnya untuk Seumur Hidup</h2>
+    </div>
+
+    <div class="price-card reveal">
+      <div class="price-top">
+        <span class="eyebrow">Ebook Hipertensi</span>
+        <div style="font-family:'Fraunces',serif; font-size:22px; margin-top:8px;">Kenali · Cegah · Kendalikan</div>
+      </div>
+      <div class="price-body">
+        <ul class="value-list">
+          <li><span class="check">✓</span> Panduan lengkap 17 halaman, format PDF</li>
+          <li><span class="check">✓</span> Ilustrasi menarik di setiap halaman</li>
+          <li><span class="check">✓</span> Tabel klasifikasi & checklist siap pakai</li>
+          <li><span class="check">✓</span> Bisa dibaca di HP, tablet, atau laptop</li>
+          <li><span class="check">✓</span> Sekali bayar, milik Anda selamanya</li>
+        </ul>
+
+        <div class="price-row">
+          <div class="price-old">Rp79.000</div>
+          <div class="price-new">Rp29.000</div>
+          <div class="price-note">Pembayaran sekali, tanpa biaya bulanan</div>
+        </div>
+
+        <a href="https://wa.me/6285963141213?text=Halo%2C%20saya%20mau%20pesan%20ebook%20Hipertensi" class="btn btn-primary btn-block">
+          Pesan Sekarang via WhatsApp
+        </a>
+
+        <div class="compare">☕ Setara harga secangkir kopi kekinian — tapi bisa membantu menjaga kesehatan jantung keluarga Anda.</div>
+        <div class="guarantee">🔒 Pembayaran aman &nbsp;·&nbsp; 📩 Ebook dikirim langsung setelah pembayaran</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="justify-content:center;">Pertanyaan Umum</span>
+      <h2>Masih Ragu? Ini Jawabannya</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>Kenapa harus beli, padahal info hipertensi banyak tersedia gratis di internet?</summary>
+        <p>Informasi yang tersebar di internet sering kali terpisah-pisah, tidak terstruktur, dan bercampur dengan sumber yang kurang bisa dipertanggungjawabkan. Ebook ini merangkum semuanya secara berurutan dan mudah diikuti — dari tenaga kesehatan yang memang menekuni edukasi masyarakat, sehingga Anda tidak perlu menyusun sendiri dari puluhan sumber berbeda.</p>
+      </details>
+      <details>
+        <summary>Bagaimana cara membaca ebook setelah membeli?</summary>
+        <p>Ebook dikirim dalam format PDF yang bisa langsung dibuka di HP, tablet, atau laptop — tidak perlu aplikasi khusus. Anda juga bebas mencetaknya bila lebih nyaman membaca versi kertas.</p>
+      </details>
+      <details>
+        <summary>Saya belum punya hipertensi, apakah ebook ini tetap berguna?</summary>
+        <p>Justru langkah pencegahan paling efektif dimulai sebelum terdiagnosis. Ebook ini disusun untuk siapa saja yang ingin memahami, mencegah, dan menjaga tekanan darah tetap terkendali sejak dini — termasuk untuk mendampingi anggota keluarga yang berisiko.</p>
+      </details>
+      <details>
+        <summary>Apakah ebook ini menggantikan pengobatan dokter?</summary>
+        <p>Tidak. Ebook ini adalah panduan edukasi untuk membantu Anda memahami dan menerapkan gaya hidup sehat sehari-hari, bukan pengganti diagnosis atau pengobatan medis. Untuk kondisi kesehatan spesifik, tetap konsultasikan dengan dokter atau tenaga kesehatan.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2>Kesehatan Keluarga Tidak Bisa Ditunda.</h2>
+      <p>Mulai langkah kecil hari ini — cukup sekali investasi, manfaatnya bisa dirasakan seumur hidup.</p>
+      <a href="https://wa.me/6285963141213?text=Halo%2C%20saya%20mau%20pesan%20ebook%20Hipertensi" class="btn btn-primary">Dapatkan Ebooknya Sekarang — Rp29.000</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>Disusun oleh Ns. Havizoh, Ners Keperawatan Komunitas &middot; Edisi Edukasi Masyarakat 2026</div>
+  <div class="fine">Ebook ini disusun untuk tujuan edukasi kesehatan masyarakat dan bukan pengganti diagnosis maupun pengobatan medis. Selalu konsultasikan kondisi kesehatan Anda dengan dokter atau tenaga kesehatan profesional.</div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:0.15 });
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
